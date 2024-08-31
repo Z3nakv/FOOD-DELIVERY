@@ -9,6 +9,8 @@ const loginUser = async (req, res) => {
     
     try {
         const user = await userModel.findOne({ email });
+        const adminUser = await userModel.findOne( {email:'Admin@gmail.com'} )
+        
         if( !user ){
             return res.status(400).json({ success:false, message: "User doesnt exists"});
         }
@@ -20,7 +22,9 @@ const loginUser = async (req, res) => {
         }
 
         const token = createToken( user._id );
-        res.status(200).json({ success:true, token })
+        const userToken = user._id.equals(adminUser._id) ? 'Admin' : null;
+        
+        res.status(200).json({ success:true, token, userToken })
     } catch (error) {
         console.log(error);
         res.status(400).json({ success:false, message:"Error" });

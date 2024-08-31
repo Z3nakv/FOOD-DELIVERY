@@ -2,6 +2,9 @@
     border-width: 1px 0px 1px 0px;
     background-color: rgb(249 250 251);
     text-align: center;
+    /* display: flex; */
+    /* align-items: center;
+    justify-content: space-around; */
 
     & .search-bar {
         display: inline-flex;
@@ -9,7 +12,7 @@
         justify-content: center;
         border: 1px solid rgb(156 163 175);
         padding: .8rem 2rem;
-        margin: 2rem 1.2rem;
+        /* margin: 2rem 1.2rem; */
         border-radius: 9999px;
         width: 75%;
 
@@ -18,7 +21,7 @@
             border: none;
             outline: none;
             background-color: inherit;
-            font-size: 1.4rem;
+            font-size: 1rem;
         }
 
         & img {
@@ -30,11 +33,23 @@
         cursor: pointer;
         width: 1.2rem;
         display: inline;
+        margin-left: 1rem;
     }
 }
 
-@media (min-width: 640px) { 
-    .search-bar {
-        width: 50%;
+@media (min-width: 1000px) { 
+
+    .search-bar-container{
+        & .search-bar {
+            width: 50%;
+            margin: 2rem 1.2rem;
+    
+            & input {
+                font-size: 1.4rem;
+            }
+        }
     }
+    
+
+    
 }

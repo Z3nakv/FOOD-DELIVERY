@@ -10,8 +10,8 @@ const LoginPopup = ({ setShowLogin }) => {
 
     const [currentState, setCurrentState] = useState("Login");
     const [data, setData] = useState({
-        name:"",
-        email:"Adrian@gmail.com",
+        name:"Admin",
+        email:"Admin@gmail.com",
         password:"12345678"
     });
 
@@ -35,6 +35,7 @@ const LoginPopup = ({ setShowLogin }) => {
         if( response.data.success ){
             setToken(response.data.token);
             localStorage.setItem("token", response.data.token);
+            localStorage.setItem("user", response.data.userToken)
             setShowLogin(false)
         }else {
             alert( response.data.message );

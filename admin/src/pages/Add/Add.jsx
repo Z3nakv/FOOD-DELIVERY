@@ -44,9 +44,9 @@ const Add = ({ url }) => {
     }
   }
 
-  useEffect(() => {
-    console.log(data);
-  },[data])
+  // useEffect(() => {
+  //   // console.log(data);
+  // },[data])
 
   return (
     <div className='add'>

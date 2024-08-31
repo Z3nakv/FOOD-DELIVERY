@@ -14,8 +14,9 @@ const Navbar = ({ setShowLogin }) => {
 
     const logout = () => {
         localStorage.removeItem("token");
+        localStorage.removeItem("user");
         setToken("");
-        navigate("/")
+        navigate("/");
     }
 
     const location = useLocation();
@@ -47,6 +48,9 @@ const Navbar = ({ setShowLogin }) => {
                     <li onClick={logout}><img src={assets.logout_icon} alt="" />Logout</li>
                 </ul>
             </div>
+            }
+            {
+                token && localStorage.getItem('user') === 'Admin' && <button onClick={()=>window.open('https://food-delivery-admin-vh4t.onrender.com/')}>Admin panel</button>
             }
 
         </div>
