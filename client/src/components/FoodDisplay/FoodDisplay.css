@@ -14,3 +14,7 @@
     gap: 30px;
     row-gap: 50px;
 }
+
+.loading {
+    font-size: 4rem;
+}
