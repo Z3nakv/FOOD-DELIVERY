@@ -1,5 +1,6 @@
 .food-display {
-    margin: 30px;
+    margin: 30px auto;
+    width: 80%;
 
     & h2{
         font-size: max(2vw, 24px);

@@ -1,8 +1,15 @@
+.header-container {
+    width: 100%;
+    background-color: var(--main-color);
+    margin-top:85px;
+}
+
 .header {
     height: 34vw;
+    width: 100%;
     margin: 30px auto;
     background: url('/header_img.png') no-repeat;
-    background-size: contain;
+    background-size: 100%;
     position: relative;
 }
 
@@ -12,9 +19,10 @@
     flex-direction: column;
     align-items: start;
     gap: 1.5vw;
-    max-width: 50%;
+    max-width: 80%;
+    margin: auto;
     bottom: 10%;
-    left: 6vw;
+    left: 10vw;
     animation: fadeIn 3s;
 }
 
@@ -30,7 +38,7 @@
         font-size: 1vw;
     }
 
-    & button {
+    & a {
         border: none;
         color: #747474;
         font-weight: 500;
@@ -38,6 +46,12 @@
         background-color: var(--white-color);
         font-size: max(1vw, 13px);
         border-radius: 50px;
+        transition: .3s;
+
+        &:hover {
+            background-color: var(--main-color);
+            color: var(--white-color);
+        }
     }
 }
 

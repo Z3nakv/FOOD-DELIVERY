@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 80%;
+    margin: auto;
 
     & h1 {
         color: #262626;
@@ -28,20 +30,46 @@
     gap: 30px;
     text-align: center;
     margin: 20px 0;
-    overflow-x: scroll;
+    overflow-x: auto;
+    cursor: grab;
+    
+    &.active {
+        cursor: grabbing;
+    }
 
-    &::-webkit-scrollbar{
+    &::-webkit-scrollbar {
         display: none;
     }
+
+    & .arrow{
+        position: absolute;
+        bottom: calc(50% - 16px);
+        font-size: 2rem;
+        font-weight: bold;
+        cursor: pointer;
+        user-select: none;
+
+        &.right {
+            right: -25px;
+        }
+        &.left {
+            left: -25px;
+        }
+    }
+
 }
 
 .explore-menu-list-item{
+    cursor: pointer;
+
     & img {
         width: 7.5vw;
         min-width: 80px;
         cursor: pointer;
         border-radius: 50%;
         transition: .2s;
+        pointer-events:none;
+        user-select: none;
     }
 
     & p{
@@ -49,12 +77,17 @@
         color: #747474;
         font-size: max(1.4vw, 16px);
         cursor: pointer;
+        user-select: none;
     }
 
     & .active {
         border: 4px solid var(--main-color);
         padding: 2px;
     }
+}
+
+.scroll-container {
+    position: relative;
 }
 
 @media (max-width:1050px) { 

@@ -2,9 +2,11 @@
     border-width: 1px 0px 1px 0px;
     background-color: rgb(249 250 251);
     text-align: center;
-    /* display: flex; */
-    /* align-items: center;
-    justify-content: space-around; */
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    padding: .5rem;
 
     & .search-bar {
         display: inline-flex;
@@ -12,7 +14,6 @@
         justify-content: center;
         border: 1px solid rgb(156 163 175);
         padding: .8rem 2rem;
-        /* margin: 2rem 1.2rem; */
         border-radius: 9999px;
         width: 75%;
 
@@ -36,6 +37,13 @@
         margin-left: 1rem;
     }
 }
+
+/* .search-bar-container.active {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+} */
 
 @media (min-width: 1000px) { 
 

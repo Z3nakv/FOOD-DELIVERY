@@ -11,6 +11,8 @@ const StoreContextProvider = ( props ) => {
     const [food_list, setFoodList] = useState([]);
     const [search, setSearch] = useState("");
     const [showSearch, setShowSearch] = useState(false);
+
+    const [showSlideBar, setShowSlideBar] = useState(false)
     
     const addToCart = async ( itemId ) => {
         if( !cartItems[itemId] ) {
@@ -76,7 +78,9 @@ const StoreContextProvider = ( props ) => {
         search,
         setSearch,
         showSearch,
-        setShowSearch
+        setShowSearch,
+        showSlideBar, 
+        setShowSlideBar
     }
 
     return (
