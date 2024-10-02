@@ -4,6 +4,12 @@
     align-items: center;
     padding: 8px 4%;
 
+    & .title {
+        color: var(--main-color);
+        font-weight: bold;
+        font-size: 2rem;
+    }
+
     & .logo {
         width: max(10%, 80px);
     }

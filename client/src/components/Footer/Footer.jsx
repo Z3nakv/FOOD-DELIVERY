@@ -8,11 +8,11 @@ const Footer = () => {
         <div className="footer-content">
             <div className="footer-content-left">
                 <img src={assets.logo} alt="" />
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur, beatae quos quas sint repellat recusandae dignissimos blanditiis quibusdam quae harum maxime nostrum ducimus odio nisi vel voluptate repudiandae error nemo natus enim! Delectus nisi facilis suscipit blanditiis officiis velit, id dolore vel amet adipisci expedita modi incidunt doloribus consectetur. Temporibus.</p>
+                <p>Innovamos la forma en que disfrutas de tu comida favorita, asegurándonos de que llegue rápido, caliente y deliciosa a la puerta de tu hogar. Conéctate con nosotros en redes sociales y sigue todas nuestras novedades.</p>
                 <div className="footer-social-icons">
-                    <img src={assets.facebook_icon} alt="" />
-                    <img src={assets.twitter_icon} alt="" />
-                    <img src={assets.linkedin_icon} alt="" />
+                    <img onClick={() => window.open('https://www.facebook.com')} src={assets.facebook_icon} alt="" />
+                    <img onClick={() => window.open('https://www.twitter.com')} src={assets.twitter_icon} alt="" />
+                    <img onClick={() => window.open('https://www.linkedin.com')} src={assets.linkedin_icon} alt="" />
                 </div>
             </div>
             <div className="footer-content-center">
@@ -28,7 +28,7 @@ const Footer = () => {
                 <h2>GET IN TOUCH</h2>
                 <ul>
                     <li>+1-212-456-7890</li>
-                    <li>contact@tomato.com</li>
+                    <li onClick={() => window.open('https://www.gmail.com')}>contact@tomato.com</li>
                 </ul>
             </div>
         </div>

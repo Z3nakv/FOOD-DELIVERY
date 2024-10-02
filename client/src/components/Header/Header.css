@@ -1,6 +1,5 @@
 .header-container {
     width: 100%;
-    background-color: var(--main-color);
     margin-top:85px;
 }
 
@@ -8,7 +7,9 @@
     height: 34vw;
     width: 100%;
     margin: 30px auto;
-    background: url('/header_img.png') no-repeat;
+    background: url('/hero-section.jpg') no-repeat;
+    background-color: rgb(116, 90, 42);
+    background-blend-mode: overlay;
     background-size: 100%;
     position: relative;
 }
